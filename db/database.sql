@@ -22,3 +22,16 @@ CREATE TABLE promociones (
     producto_id INT NOT NULL UNIQUE,
     Foreign Key (producto_id) REFERENCES productos(id) ON DELETE CASCADE
 );
+
+INSERT INTO categorias (nombre) VALUES
+('Tecnología'),
+('Hogar'),
+('Ropa');
+
+-- Insertar 5 productos
+INSERT INTO productos (nombre, precio, categoria_id) VALUES
+('Laptop Pro X', 2500000.00, 1),
+('Mouse Gamer', 150000.00, 1),
+('Juego de Sábanas Queen', 120000.00, 2),
+('Camiseta de Algodón', 55000.00, 3),
+('Cafetera Eléctrica', 210000.00, 2);
